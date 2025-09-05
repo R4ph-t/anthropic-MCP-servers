@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: mcp-server-everything
+    runtime: docker
+    # don't forget to change this to your own repo
+    repo: https://github.com/R4ph-t/anthropic-MCP-servers
+    branch: main
+    dockerfilePath: src/everything/Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
+    plan: free
